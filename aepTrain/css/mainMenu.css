@@ -1,0 +1,26 @@
+﻿.Menu
+
+{ 
+   
+     background:transparent url(images/m1-act.jpg) repeat-x;
+     
+
+    text-align:center;
+
+    font-size:11px;
+
+    border: solid 1px #fff !important;
+
+}
+
+ 
+
+ 
+
+.menuhover
+
+{
+
+     color:#fff;background:transparent url(images/m1-act.jpg) no-repeat topcenter;
+
+ }

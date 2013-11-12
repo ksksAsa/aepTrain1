@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageForum.master.cs" Inherits="MasterPages_MasterPageForum" %>
+
+<%@ Register src="../controls/StudentMainMenu.ascx" tagname="mainMenu" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../css/Styles.css" rel="Stylesheet" type="text/css" />
+   
+    <style type="text/css">
+        .style1
+        {
+            width: 80%;
+        }
+    </style>
+   
+</head>
+<body>
+    <form id="form1" runat="server">
+<div class="wrap">
+
+    <div id="topContent">
+    
+   
+        <uc1:mainMenu ID="mainMenu1" runat="server" />
+   
+    </div>
+    <div id ="topContent2">
+    
+    </div>
+  <div id="inner">
+    <div id ="mainContent">
+    
+    <div id="container">
+        
+           
+            <table class="style1">
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink1" runat="server" 
+                            NavigateUrl="~/Students/Forum/DefaultForum.aspx">Αρχή</asp:HyperLink>
+                    </td>
+                   <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder></td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+            </table>
+           
+       
+    </div>
+    </div>
+    <div id="leftContent">
+    <div class="welcome">
+     <h4>Είστε συνδεδεμένος ως <asp:Label ID="seslbl" runat="server"></asp:Label></h4> 
+        
+        <asp:LinkButton ID="logoutBtn" runat="server" onclick="logoutBtn_Click" 
+            PostBackUrl="~/loginOrRegister/Login.aspx">Αποσύνδεση</asp:LinkButton>
+        <br />
+    </div>
+    <h3>Χρήσιμες Βοήθειες
+        <asp:DataList ID="DataList1" runat="server" DataSourceID="helpDataSource" 
+            ShowHeader="False">
+            <ItemTemplate>
+            <asp:HyperLink ID="helpHyper" runat="server" Text='<%# Eval("linkDescription") %>'
+             NavigateUrl='<%# Eval("helpLink") %>' Target="_blank" />
+                
+                <br />
+<br />
+            </ItemTemplate>
+        </asp:DataList>
+        <asp:SqlDataSource ID="helpDataSource" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+            SelectCommand="SELECT [helpLink], [linkDescription] FROM [Helps] WHERE ([chapter_id] = @chapter_id)">
+            <SelectParameters>
+                <asp:SessionParameter Name="chapter_id" SessionField="chapterID" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        </h3>
+        <p>&nbsp;</p> 
+        
+  </div>
+  </div>
+    <div id="footerContent">
+    <h1>copyright 2013</h1>
+    </div>
+    </div>
+    </form>
+    
+</body>
+</html>

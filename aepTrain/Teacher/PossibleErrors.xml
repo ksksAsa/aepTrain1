@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Errors>
+  <Error id="1" chaptID="1" value="Κατανόηση αλγορίθμου"></Error>
+  <Error id="2" chaptID="1" value="Κατανόηση προβλήματος"></Error>
+  <Error id="3" chaptID="2" value="Έννοια Μεταβλητή"></Error>
+  <Error id="4" chaptID="2" value="Ανάθεση Μεταβλητής"></Error>
+  <Error id="7" chaptID="2" value="Ροή προγράμματος"></Error>
+  <Error id="8" chaptID="2" value="Ακολουθιακή δομή"></Error>
+  <Error id="9" chaptID="2" value="Μεθοδολογία ανάπτυξης"></Error>
+  <Error id="10" chaptID="3" value="Έλεγχος συνθήκης"></Error>
+  <Error id="11" chaptID="3" value="Μεταβλητές συνθήκης"></Error>
+  <Error id="12" chaptID="3" value="Βασικές έννοιες επιλογής"></Error>
+  <Error id="13" chaptID="3" value="Πολλαπλή επιλογή"></Error>
+  <Error id="14" chaptID="3" value="Λογικές Συνθήκες"></Error>
+  <Error id="15" chaptID="3" value="Λογικοί Τελεστές"></Error>
+</Errors>
